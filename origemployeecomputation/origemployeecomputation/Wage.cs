@@ -6,22 +6,24 @@ using System.Threading.Tasks;
 
 namespace origemployeecomputation
 {
-    internal class Attendance
+    internal class Wage
     {
-        public static void attendancemethod()
+        public static void empwagemethod()
         {
-
-
+            int empHour, wagePerHour = 20;
             Random obj = new Random();
             int num = obj.Next(0, 2);
             if (num == 1)
             {
-                Console.WriteLine("Employee is Present");
+                empHour = 8;
             }
             else
             {
-                Console.WriteLine("Employee is Absent");
+                empHour = 0;
             }
+
+            int empWage = wagePerHour * empHour;
+            Console.WriteLine("employee wage: " + empWage);
 
         }
     }
